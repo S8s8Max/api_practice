@@ -28,6 +28,9 @@ except ImportError:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+if not DEBUG:
+    SECRET_KEY = os.environ['SECRET_KEY']
+
 ALLOWED_HOSTS = ["butler-api.herokuapp.com","127.0.0.1"]
 
 
