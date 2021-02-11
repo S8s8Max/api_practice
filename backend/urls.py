@@ -15,18 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers
-
-from api.views import LogViewSet
-from api.views import MainView
-
-router = routers.DefaultRouter()
-router.register(r'logs', LogViewSet)
+import demo.views as demo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
-    path('', MainView.as_view()),
+    #path('api/', include(router.urls)),
+    path('', demo.index),
 ]
 
 admin.site.site_header = '東南アジア諸国の利子率'

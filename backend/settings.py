@@ -31,7 +31,7 @@ except ImportError:
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ["butler-api.herokuapp.com","127.0.0.1"]
+ALLOWED_HOSTS = ["butler-api.herokuapp.com","127.0.0.1","localhost"]
 
 
 # Application definition
@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     "rest_framework",
     "django_filters",
     "api",
+    "demo",
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,7 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "ststic")]
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
