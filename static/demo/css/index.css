@@ -1,0 +1,51 @@
+header {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #e4e9ad;
+  }
+
+footer {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #717171;
+}
+
+h3, h2, p {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.desc-table {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50%;
+  }
+
+  table tr{
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+  }
+
+  table tr:hover{
+    background-color: #d4f0fd;
+  }
+
+  table th,table td{
+    text-align: center;
+    width: 25%;
+    padding: 15px 0;
+  }
+

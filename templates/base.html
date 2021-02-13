@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'demo/css/index.css' %}">
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
         <title>Lending Interest Rate</title>
@@ -11,9 +12,9 @@
     <body>
     <div class="">
         <header>
-            <p class="site-name"><a href="{% url 'admin:index' %}">Admin Site</a></p>
-            <nav>
-        </nav>
+            <h1>Lending Interest Rate, South-East Asia</h1>
+            <h3 class="site-name"><a href="{% url 'admin:index' %}">Admin Site</a></h3>
+            <nav></nav>
         </header>
         <div class="content">
             {% block content %}
@@ -21,4 +22,7 @@
         </div>
     </div>
     </body>
+    <footer>
+  	    <p>© All rights reserved by webcampnavi.</p>
+    </footer>
 </html>

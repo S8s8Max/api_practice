@@ -2,27 +2,28 @@
 
 {% block content %}
 
-<h1>Lending Interest Rate, South-East Asia</h1>
-
-
 <canvas id="graph" height="400px" width="700px"></canvas>
 
-<h3>Country</h3>
-<ul>
-    <li>Brunei</li>
-    <li>Indonesia</li>
-    <li>Cambodia</li>
-    <li>Laos</li>
-    <li>Myanmer</li>
-    <li>Malaysia</li>
-    <li>Phillipines</li>
-    <li>Shingapore</li>
-    <li>Thailand</li>
-    <li>East Timor</li>
-    <li>Vietnam</li>
-</ul>
-<h3>Lending Interest Rate</h3>
-<p>: "Lending Interest Rate" is the rate which is occured when people borrow money from bank.</p>
+<h2>Country List</h2>
+<div class="desc-table">
+    <table align="center">
+        <tr>
+            <th>No.</th>
+            <th>Country</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ item }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<h2>Remark</h2>
+<p>"Lending Interest Rate" is the rate which is occured when people borrow money from bank.</p>
+
+
 
 <script type="text/javascript">
 var ctx = document.getElementById('graph').getContext('2d');
@@ -35,21 +36,21 @@ var myChart = new Chart(ctx, {
                     "2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
         datasets: [
             {
-                label: "{{ data.BRN.country }}",
+                label: "{{ BRN.country }}",
                 data: [,,,,,,,,,,,,,,,,,, 6.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5,],
                 backgroundColor: "{{ data.BRN.color }}",
                 borderColor: "{{ data.BRN.color }}",
                 fill: false,
             },
             {
-                label: "{{ data.IDN.country }}",
+                label: "{{ IDN.country }}",
                 data: [,,,,,, 21.50416667, 21.66666667, 22.0975, 21.69916667, 20.825, 25.53333333, 24.03333333, 20.58666667, 17.76, 18.85166667, 19.2175, 21.8175, 32.15416667, 27.6625, 18.455, 18.5475, 18.945, 16.935, 14.12416667, 14.05083333, 15.97916667, 13.86166667, 13.59833333, 14.49833333, 13.25166667, 12.40333333, 11.795, 11.6575, 12.605, 12.6625, 11.88833333, 11.07333333, 10.53666667, 10.36583333,],
                 backgroundColor: "{{ data.IDN.color }}",
                 borderColor: "{{ data.IDN.color }}",
                 fill: false,
             },
             {
-                label: "{{ data.KHM.country }}",
+                label: "{{ KHM.country }}",
                 data:  [,,,,,,,,,,,,,,,,, , , , , , , , , , , , , , , , , , , , , , , , ],
                 backgroundColor: "{{ data.KHM.color }}",
                 borderColor: "{{ data.KHM.color }}",
