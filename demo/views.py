@@ -22,7 +22,7 @@ def index(request):
             )
             data.save()
 
-    BRN = Data.objects.filter(country="BRN").all()
+    BRN = Data.objects.filter(country="BRN")
     IDN = Data.objects.filter(country="IDN")
     KHM = Data.objects.filter(country="KHM")
     LAO = Data.objects.filter(country="LAO")
@@ -46,7 +46,6 @@ def index(request):
     TLS_interest_rate = [None or "" if x.interest_rate == None else x.interest_rate for x in TLS]
     VNM_interest_rate = [None or "" if x.interest_rate == None else x.interest_rate for x in VNM]
 
-    print(BRN_interest_rate)
     params = {
         "data": {
             "BRN": {
