@@ -1,6 +1,6 @@
 # Personal project directory
 api_venv/
-staticfiles/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
