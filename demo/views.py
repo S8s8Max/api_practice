@@ -84,7 +84,7 @@ def index(request):
                 "color": colorPicker(),
             },
             "SGP": {
-                "country": "Shingapore",
+                "country": "Singapore",
                 "interest_rate": SGP_interest_rate,
                 "color": colorPicker(),
             },

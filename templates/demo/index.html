@@ -11,17 +11,18 @@
             <th>No.</th>
             <th>Country</th>
         </tr>
-        {% for item in data %}
+        {% for item in data.values %}
         <tr>
             <td>{{ forloop.counter }}</td>
-            <td>{{ item }}</td>
+            <td>{{ item.country }}</td>
         </tr>
         {% endfor %}
     </table>
 </div>
 
 <h2>Remark</h2>
-<p>"Lending Interest Rate" is the rate which is occured when people borrow money from bank.</p>
+<p>"Lending Interest Rate (%) is the bank rate that usually meets the short- and medium-term financing needs of the private sector. This rate is normally differentiated according to creditworthiness of borrowers and objectives of financing. The terms and conditions attached to these rates differ by." - International Monetary Fund, International Financial Statistics and data files.</p>
+<p></p>
 
 
 
